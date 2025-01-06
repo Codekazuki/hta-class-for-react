@@ -3,11 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div className='footer'>
-      <p>ged</p>
-      <p>ged</p>
-      <p>ged</p>
-      <p>ged</p>
-      <p>ged</p>
+      <a href='#'>facebook</a>
+      <a href='#'>linkedIn</a>
+      <a href='#'>Twitter</a>
     </div>
   );
 };

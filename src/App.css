@@ -32,6 +32,6 @@ a {
   display: flex;
   flex-direction: column;
 }
-p {
+a {
   font-size: clamp(1rem, 2.5vw, 5rem);
 }
