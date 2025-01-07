@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 
 const Service = () => {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  let count = 0;
   const handleIncrement = () => {
-    setCount((c) => c + 1);
+    count = count + 1;
+    console.log(count);
   };
-  const handleDecrement = () => {
-    setCount((c) => c - 1);
-  };
-  const handleReset = () => {
-    setCount((c) => 0);
-  };
+  // const handleIncrement = () => {
+  //   setCount((c) => c + 1);
+  // };
+  // const handleDecrement = () => {
+  //   setCount((c) => c - 1);
+  // };
+  // const handleReset = () => {
+  //   setCount((c) => 0);
+  // };
   return (
     <div>
       <p>
@@ -25,8 +30,8 @@ const Service = () => {
           {count}
         </h1>
         <button onClick={handleIncrement}>Increase</button>
-        <button onClick={handleReset}>Reset</button>
-        <button onClick={handleDecrement}>Decrease</button>
+        {/* <button onClick={handleReset}>Reset</button>
+        <button onClick={handleDecrement}>Decrease</button> */}
       </section>
     </div>
   );
