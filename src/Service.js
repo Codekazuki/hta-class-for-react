@@ -21,7 +21,9 @@ const Service = () => {
         deleniti dicta laborum dolores earum voluptatem!
       </p>
       <section>
-        <h1 className={count > 1 ? "green" : "red"}>{count}</h1>
+        <h1 className={count > 0 ? "green" : count === 0 ? "grey" : "red"}>
+          {count}
+        </h1>
         <button onClick={handleIncrement}>Increase</button>
         <button onClick={handleReset}>Reset</button>
         <button onClick={handleDecrement}>Decrease</button>
