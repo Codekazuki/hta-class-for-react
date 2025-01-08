@@ -37,13 +37,17 @@ a {
 }
 .green {
   color: green;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 .red {
   color: red;
-  font-size: 9rem;
+  font-size: 6rem;
 }
 .grey {
   color: grey;
-  font-size: 4rem;
+  font-size: 6rem;
+}
+.blue {
+  font-size: 6rem;
+  color: blue;
 }

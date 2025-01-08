@@ -1,4 +1,5 @@
 import "./App.css";
+import Counter from "./Counter";
 import Footer from "./Footer";
 import Main from "./Main";
 import Navbar from "./Navbar";
@@ -7,8 +8,10 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
-      <Main />
-      <Footer />
+      <Counter />
+
+      {/* <Main /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

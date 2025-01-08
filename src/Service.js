@@ -1,21 +1,4 @@
-import React, { useState } from "react";
-
 const Service = () => {
-  // const [count, setCount] = useState(0);
-  let count = 0;
-  const handleIncrement = () => {
-    count = count + 1;
-    console.log(count);
-  };
-  // const handleIncrement = () => {
-  //   setCount((c) => c + 1);
-  // };
-  // const handleDecrement = () => {
-  //   setCount((c) => c - 1);
-  // };
-  // const handleReset = () => {
-  //   setCount((c) => 0);
-  // };
   return (
     <div>
       <p>
@@ -25,14 +8,6 @@ const Service = () => {
         quia ullam odit rerum cupiditate molestias ut aliquam harum, neque quo,
         deleniti dicta laborum dolores earum voluptatem!
       </p>
-      <section>
-        <h1 className={count > 0 ? "green" : count === 0 ? "grey" : "red"}>
-          {count}
-        </h1>
-        <button onClick={handleIncrement}>Increase</button>
-        {/* <button onClick={handleReset}>Reset</button>
-        <button onClick={handleDecrement}>Decrease</button> */}
-      </section>
     </div>
   );
 };
