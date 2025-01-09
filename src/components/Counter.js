@@ -11,8 +11,6 @@ const Counter = () => {
   };
   return (
     <div>
-      <img src='./images/boolu.jfif' alt='boolu' width='48px' />
-      <img src={ball} alt='' />
       <p
         className={
           count === 0

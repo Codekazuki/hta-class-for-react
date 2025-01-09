@@ -54,14 +54,15 @@ a {
 .list {
   width: 90dvw;
   max-width: 1170px;
-  margin: 2rem auto;
+  margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
-  background-color: rgb(240, 255, 240);
+  background-color: rgb(255, 240, 241);
 }
 .card img {
   width: 90%;
+  height: 80%;
   object-fit: cover;
 }
 .card {
@@ -70,4 +71,16 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 425px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(80, 42, 219);
+  }
+}
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(42, 219, 42);
+  }
 }
