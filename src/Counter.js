@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ball from "./asset/images/boolu.jfif";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -10,6 +11,8 @@ const Counter = () => {
   };
   return (
     <div>
+      <img src='./images/boolu.jfif' alt='boolu' width='48px' />
+      <img src={ball} alt='' />
       <p
         className={
           count === 0
