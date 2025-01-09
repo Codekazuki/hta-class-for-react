@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ball from "./asset/images/boolu.jfif";
+import ball from "../asset/images/boolu.jfif";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
