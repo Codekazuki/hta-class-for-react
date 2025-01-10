@@ -51,17 +51,17 @@ a {
   font-size: 6rem;
   color: blue;
 }
+a {
+  color: white;
+}
 .list {
   width: 90dvw;
   max-width: 1170px;
   margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   background-color: rgb(255, 240, 241);
-}
-a {
-  color: white;
 }
 .card img {
   width: 90%;
