@@ -35,10 +35,12 @@ const FetchDataComponent = () => {
   }
 
   return (
-    <div>
+    <div className='cont'>
       <h1>Fetched Data</h1>
-      <p>{data.fact}</p>
-      <button onClick={fetchAnotherFact}>Fetch another Fact</button>
+      <p className='fact'>{data.fact}</p>
+      <button className='fetch-btn' onClick={fetchAnotherFact}>
+        Fetch another Fact
+      </button>
     </div>
   );
 };
