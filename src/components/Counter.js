@@ -5,6 +5,9 @@ const Counter = () => {
   const handleIncrease = () => {
     setCount(count + 1);
   };
+  const handleDecrease = () => {
+    setCount(count - 1);
+  };
   const handleDouble = () => {
     setCount(count * 2);
   };
@@ -24,8 +27,12 @@ const Counter = () => {
         {count}
       </p>
       <div>
-        <button onClick={handleIncrease}>increment</button>
-        <button>decrement</button>
+        <button disabled={count > 4} onClick={handleIncrease}>
+          increment
+        </button>
+        <button onClick={handleDecrease} disabled={count < 1}>
+          decrement
+        </button>
         <button onClick={handleDouble}>double</button>
         <button>division by 2</button>
         <button>square</button>
