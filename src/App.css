@@ -18,6 +18,11 @@
   outline: none;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+.fetch-btn:hover {
+  background-color: greenyellow;
+  color: black;
 }
 .fact {
   color: green;
@@ -29,4 +34,8 @@
   height: 50%;
   background-color: wheat;
   border-radius: 12px;
+}
+.fact:hover {
+  color: rgb(225, 84, 84);
+  background-color: rgb(179, 229, 245);
 }
