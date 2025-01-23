@@ -20,6 +20,9 @@ const Counter = () => {
   const removePerson = (id) => {
     setTrial(trial.filter((x) => x.id !== id));
   };
+  const reloadList = () => {
+    setTrial(data);
+  };
 
   return (
     <section>
@@ -67,7 +70,7 @@ const Counter = () => {
       <button onClick={clearList} style={{ backgroundColor: "red" }}>
         Clear List
       </button>
-      <button onClick={clearList} style={{ backgroundColor: "green" }}>
+      <button onClick={reloadList} style={{ backgroundColor: "green" }}>
         Reload List
       </button>
     </section>
