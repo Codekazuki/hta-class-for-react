@@ -23,7 +23,7 @@ const Counter = () => {
   const reloadList = () => {
     setTrial(data);
   };
-
+  console.log(trial.length);
   return (
     <section>
       <p
@@ -39,7 +39,6 @@ const Counter = () => {
       >
         {count}
       </p>
-
       <div>
         <button disabled={count > 4} onClick={handleIncrease}>
           increment
@@ -67,12 +66,16 @@ const Counter = () => {
           <button onClick={() => removePerson(el.id)}>remove</button>
         </div>
       ))}
-      <button onClick={clearList} style={{ backgroundColor: "red" }}>
-        Clear List
-      </button>
-      <button onClick={reloadList} style={{ backgroundColor: "green" }}>
-        Reload List
-      </button>
+
+      {trial.length < 1 ? (
+        <button onClick={reloadList} style={{ backgroundColor: "green" }}>
+          Reload List
+        </button>
+      ) : (
+        <button onClick={clearList} style={{ backgroundColor: "red" }}>
+          Clear List
+        </button>
+      )}
     </section>
   );
 };
