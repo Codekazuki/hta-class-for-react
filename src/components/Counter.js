@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import data from "../data";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
+  const [trial, setTrial] = useState();
   const handleIncrease = () => {
     setCount(count + 1);
   };
@@ -11,6 +13,8 @@ const Counter = () => {
   const handleDouble = () => {
     setCount(count * 2);
   };
+  console.log(data);
+
   return (
     <div>
       <p
@@ -37,6 +41,9 @@ const Counter = () => {
         <button>division by 2</button>
         <button>square</button>
       </div>
+      {data.map((el) => (
+        <p>{el}</p>
+      ))}
     </div>
   );
 };
