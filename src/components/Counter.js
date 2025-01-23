@@ -16,7 +16,7 @@ const Counter = () => {
   console.log(data);
 
   return (
-    <div>
+    <section>
       <p
         className={
           count === 0
@@ -41,10 +41,10 @@ const Counter = () => {
         <button>division by 2</button>
         <button>square</button>
       </div>
-      {data.map((el) => (
-        <p>{el}</p>
+      {data.map((el, index) => (
+        <p key={index}>{el.age}</p>
       ))}
-    </div>
+    </section>
   );
 };
 

@@ -1,3 +1,3 @@
-const hello = [1, 2, 3, "prince"];
+const hello = [{ age: 9 }, { firstName: "Lanre", age: 42, location: "Abuja" }];
 
 export default hello;
