@@ -3,7 +3,7 @@ import data from "../data";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const [trial, setTrial] = useState();
+  const [trial, setTrial] = useState(data);
   const handleIncrease = () => {
     setCount(count + 1);
   };
@@ -14,6 +14,12 @@ const Counter = () => {
     setCount(count * 2);
   };
   console.log(data);
+  const clearList = () => {
+    setTrial([]);
+  };
+  const removePerson = (id) => {
+    setTrial(trial.filter((x) => x.id !== id));
+  };
 
   return (
     <section>
@@ -30,6 +36,7 @@ const Counter = () => {
       >
         {count}
       </p>
+
       <div>
         <button disabled={count > 4} onClick={handleIncrease}>
           increment
@@ -41,9 +48,28 @@ const Counter = () => {
         <button>division by 2</button>
         <button>square</button>
       </div>
-      {data.map((el, index) => (
-        <p key={index}>{el.age}</p>
+      {trial.map((el) => (
+        <div
+          key={el.id}
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            backgroundColor: "green",
+            padding: "1rem",
+            margin: "4px",
+            fontSize: "1rem",
+          }}
+        >
+          <p>{el.name}</p>
+          <button onClick={() => removePerson(el.id)}>remove</button>
+        </div>
       ))}
+      <button onClick={clearList} style={{ backgroundColor: "red" }}>
+        Clear List
+      </button>
+      <button onClick={clearList} style={{ backgroundColor: "green" }}>
+        Reload List
+      </button>
     </section>
   );
 };
