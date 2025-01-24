@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import data from "../data";
+import data2 from "../data2";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
   const [trial, setTrial] = useState(data);
+  const [friend, setFriend] = useState(data2);
+
   const handleIncrease = () => {
     setCount(count + 1);
   };
@@ -13,7 +16,7 @@ const Counter = () => {
   const handleDouble = () => {
     setCount(count * 2);
   };
-  console.log(data);
+
   const clearList = () => {
     setTrial([]);
   };
@@ -76,6 +79,23 @@ const Counter = () => {
           Clear List
         </button>
       )}
+      <div>
+        <p>My friend and their adresses</p>
+        <ul>
+          <li>
+            {friend.map((eachFriend, index) => {
+              const { name, address, phoneNumber } = eachFriend;
+              return (
+                <div key={index}>
+                  <h1>{name}</h1>
+                  <h3>{phoneNumber}</h3>
+                  <p> {address}</p>
+                </div>
+              );
+            })}
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };
