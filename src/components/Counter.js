@@ -26,7 +26,15 @@ const Counter = () => {
   const reloadList = () => {
     setTrial(data);
   };
-  console.log(trial.length);
+  const clearFriend = () => {
+    setFriend([]);
+  };
+  const reloadFriend = () => {
+    setFriend(data2);
+  };
+  const handleDeleteFriend = (name) => {
+    setFriend(friend.filter((fre) => fre.name !== name));
+  };
   return (
     <section>
       <p
@@ -83,18 +91,28 @@ const Counter = () => {
         <p>My friend and their adresses</p>
         <ul>
           <li>
-            {friend.map((eachFriend, index) => {
+            {friend.map((eachFriend) => {
               const { name, address, phoneNumber } = eachFriend;
               return (
-                <div key={index}>
+                <div key={name}>
                   <h1>{name}</h1>
                   <h3>{phoneNumber}</h3>
                   <p> {address}</p>
+                  <button onClick={() => handleDeleteFriend(name)}>
+                    unfriend
+                  </button>
                 </div>
               );
             })}
           </li>
         </ul>
+        <button
+          style={{ backgroundColor: "indigo", color: "white" }}
+          onClick={clearFriend}
+        >
+          Clear Friends
+        </button>
+        <button onClick={reloadFriend}>Reload Friends</button>
       </div>
     </section>
   );
