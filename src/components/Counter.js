@@ -3,7 +3,6 @@ import data from "../data";
 import data2 from "../data2";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
   const [trial, setTrial] = useState(data);
   const [friend, setFriend] = useState(data2);
 
@@ -25,8 +24,7 @@ const Counter = () => {
   const handleDeleteFriend = (name) => {
     setFriend(friend.filter((fre) => fre.name !== name));
   };
-  const cal = (18 / 2) * 4;
-  console.log(cal);
+
   return (
     <section>
       {trial.map((el) => (
@@ -56,13 +54,13 @@ const Counter = () => {
         </button>
       )}
       <div>
-        <p>My friend and their adresses</p>
+        <h1>My friend and their adresses</h1>
         <ul>
           <li>
             {friend.map((eachFriend) => {
               const { name, address, phoneNumber } = eachFriend;
               return (
-                <div key={name}>
+                <div className='friend' key={name}>
                   <h1>{name}</h1>
                   <h3>{phoneNumber}</h3>
                   <p> {address}</p>
