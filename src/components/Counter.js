@@ -7,16 +7,6 @@ const Counter = () => {
   const [trial, setTrial] = useState(data);
   const [friend, setFriend] = useState(data2);
 
-  const handleIncrease = () => {
-    setCount(count + 1);
-  };
-  const handleDecrease = () => {
-    setCount(count - 1);
-  };
-  const handleDouble = () => {
-    setCount(count * 2);
-  };
-
   const clearList = () => {
     setTrial([]);
   };
@@ -39,30 +29,6 @@ const Counter = () => {
   console.log(cal);
   return (
     <section>
-      <p
-        className={
-          count === 0
-            ? "grey "
-            : count >= 1 && count <= 100
-            ? "green"
-            : count < 0
-            ? "red"
-            : "blue"
-        }
-      >
-        {count}
-      </p>
-      <div>
-        <button disabled={count > 4} onClick={handleIncrease}>
-          increment
-        </button>
-        <button onClick={handleDecrease} disabled={count < 1}>
-          decrement
-        </button>
-        <button onClick={handleDouble}>double</button>
-        <button>division by 2</button>
-        <button>square</button>
-      </div>
       {trial.map((el) => (
         <div
           key={el.id}
