@@ -35,6 +35,8 @@ const Counter = () => {
   const handleDeleteFriend = (name) => {
     setFriend(friend.filter((fre) => fre.name !== name));
   };
+  const cal = (18 / 2) * 4;
+  console.log(cal);
   return (
     <section>
       <p
