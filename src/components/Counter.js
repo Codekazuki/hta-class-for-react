@@ -18,6 +18,7 @@ const Counter = () => {
   const clearFriend = () => {
     setFriend([]);
   };
+
   const reloadFriend = () => {
     setFriend(data2);
   };
