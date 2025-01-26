@@ -5,6 +5,7 @@ import data2 from "../data2";
 const Counter = () => {
   const [trial, setTrial] = useState(data);
   const [friend, setFriend] = useState(data2);
+  const [value, setValue] = useState(0);
 
   const clearList = () => {
     setTrial([]);
@@ -25,9 +26,16 @@ const Counter = () => {
   const handleDeleteFriend = (name) => {
     setFriend(friend.filter((fre) => fre.name !== name));
   };
+  const handleValue = () => {
+    setValue((c) => c + 1);
+  };
 
   return (
     <section>
+      <div>
+        <h1>{value}</h1>
+        <button onClick={handleValue}>add</button>
+      </div>
       {trial.map((el) => (
         <div
           key={el.id}
