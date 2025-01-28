@@ -14,9 +14,21 @@ const Counter = () => {
     const newPeople = people.filter((person) => person.id !== id);
     setPeople(newPeople);
   };
+  const totalPeople = data.length;
   return (
     <section>
-      <p>List of my friends</p>
+      {people.length ? (
+        <p>
+          List of my friends <br />
+          we have {people.length} friends
+        </p>
+      ) : (
+        <p>
+          No friend again
+          <br />
+          click reload button to fetch friends again
+        </p>
+      )}
 
       <ul>
         {people.map((person) => {
@@ -30,7 +42,12 @@ const Counter = () => {
         })}
       </ul>
       <button onClick={clearList}>clear</button>
-      <button onClick={reloadList}>reload</button>
+
+      {people.length < totalPeople ? (
+        <button onClick={reloadList}>reload</button>
+      ) : (
+        ""
+      )}
     </section>
   );
 };
