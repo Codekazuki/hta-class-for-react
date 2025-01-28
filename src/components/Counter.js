@@ -41,13 +41,11 @@ const Counter = () => {
           );
         })}
       </ul>
-      <button onClick={clearList}>clear</button>
+      {people.length ? <button onClick={clearList}>clear</button> : null}
 
       {people.length < totalPeople ? (
         <button onClick={reloadList}>reload</button>
-      ) : (
-        ""
-      )}
+      ) : null}
     </section>
   );
 };
